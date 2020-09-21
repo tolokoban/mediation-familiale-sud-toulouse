@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Content from './app/content'
+import Splash from './app/splash/splash'
+import './index.css'
+import "./fonts.css"
+import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Temps minimal d'affichage du Splash screen.
+const SPLASH_TIMEOUT = 1200
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+async function start() {
+    // Load welcome image then start!
+    const welcomePhoto = document.getElementById("welcome-photo")
+    if (welcomePhoto) {
+        welcomePhoto.style.backgroundImage = "url(./welcome.webp)"
+    }
+    Content.applyContent()
+    await Splash.loadAssetsAndVanish(
+        ["./welcome.webp"],
+        SPLASH_TIMEOUT
+    )
+}
+
+// tslint:disable-next-line: no-floating-promises
+start()
+
+serviceWorker.unregister()

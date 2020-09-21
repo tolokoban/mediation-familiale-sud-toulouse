@@ -1,13 +1,291 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --thm-color-0: #ccc;
+    --thm-color-1: #eee;
+    --thm-color-PL: #74faff;
+    --thm-color-P: #57bbbf;
+    --thm-color-PD: #40898c;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #d4dfdf;
+    /*
+    background-image: url(./office.webp);
+    background-size: contain;
+    background-position: center bottom;
+    */
+}
+
+#welcome-photo {
+    margin: 0;
+    width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: center;
+}
+
+main>* {
+    flex: 0 0 auto;
+}
+
+div.logo,
+div.trombine {
+    flex: 0 0 auto;
+    content: ".";
+    font-size: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    margin: 0 .5rem;
+}
+
+div.logo {
+    background-image: url(./logo.svg);
+}
+
+div.trombine {
+    background-image: url(./trombine.webp);
+    border-radius: 50%;
+}
+
+header {
+    position: relative;
+    background: var(--thm-color-PD);
+    margin: 0;
+    padding: 0;
+    color: #fffe;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    z-index: 2;
+    box-shadow: 0 8px 16px #0007;
+}
+
+header>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    text-align: center;
+    width: 100vw;
+    max-width: 1200px;
+}
+
+header p {
+    white-space: nowrap;
+}
+
+nav {
+    background: var(--thm-color-PD);
+    color: #fffe;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 16px #0007;
+    z-index: 1;
+    padding-right: .5rem;
+}
+
+nav>div.logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+h1,
+h2 {
+    font-weight: 500;
+}
+
+section {
+    background: var(--thm-color-1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    box-shadow: 0 1px 2px #0007;
+    width: calc(100% - 2rem);
+    max-width: 1400px;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    margin: 2rem 0 1rem 0;
+}
+
+li>div {
+    position: relative;
+    max-height: 3.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+li.expand>div {
+    max-height: none;
+}
+
+li>div::after {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    right: 0;
+    bottom: 0;
+    content: ".";
+    font-size: 0;
+    background-image: linear-gradient(to top, var(--thm-color-1), transparent);
+}
+
+li.expand>div::after {
+    background: none;
+}
+
+@media (min-width: 700px) {
+    section>ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    section>ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+h1 {
+    font-size: 1.5rem;
+    background: var(--thm-color-P);
+    text-align: center;
+    color: #000d;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: .5rem .5rem 0 0;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+h2::before {
+    content: "▸";
+    position: absolute;
+    margin: -.25rem -1rem;
+    transition: transform .3s;
+}
+
+li.expand>h2::before {
+    transform: rotate(90deg);
+}
+
+body {
+    background-color: var(--thm-color-0);
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-weight: 500;
+    font-variant: small-caps;
+    width: 100%;
+    border: none;
+    text-align: right;
+    background: none;
+    margin: 0;
+    margin-top: -1rem;
+    padding: 0 2rem;
+    color: var(--thm-color-PD);
+}
+
+li.expand button {
+    display: none;
+}
+
+img.office {
+    width: 100vw;
+    margin: 0;
+}
+
+a[href], a[href]:visited {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    font-variant: small-caps;
+    box-shadow: 0 2px 4px #0007;
+    border-radius: .25rem;
+    margin: 1rem 0;
+    color: var(--thm-color-PD);
+    text-decoration: none;
+}
+
+a[href] > * {
+    margin: 0 .5rem;
+}
+
+section.contact {
+    overflow: hidden;
+}
+
+section.contact > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.contact > div > div {
+    flex: 0 0 auto;
+}
+
+section.contact > div > .big-trombine {
+    flex: 0 1 auto;
+    margin: 0 0 -1.5rem 0;
+}
+
+@media (max-width: 680px) {
+    section.contact > div > .big-trombine {
+        width: 192px;
+    }
 }

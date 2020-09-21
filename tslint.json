@@ -42,6 +42,7 @@
     "prefer-method-signature": false,
     "quotemark": false,
     "semicolon": [true, "never"],
+    "strict-boolean-expressions": false,
     "trailing-comma": false,
     "type-literal-delimiter": false,
     "typedef": false,
