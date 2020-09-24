@@ -23,6 +23,17 @@
     height: 60vh;
     background-size: cover;
     background-position: center center;
+    padding: 0 1em;
+    padding-top: 7vh;
+    font-size: 7vw;
+    text-align: center;
+    color: var(--thm-color-PD);
+    font-family: Courgette;
+}
+@media (min-width: 600px) {
+    #welcome-photo {
+        font-size: 42px;
+    }
 }
 
 * {
@@ -284,4 +295,14 @@ section.contact>div>.big-trombine {
     section.contact>div>.big-trombine {
         width: 192px;
     }
+}
+
+a.invisible,
+a.invisible:visited {
+    text-decoration: none;
+    border: none;
+    color: #000;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
 }
