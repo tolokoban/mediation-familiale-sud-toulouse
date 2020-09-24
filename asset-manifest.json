@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/mediation-familiale-sud-toulouse/static/css/main.bb513a47.chunk.css",
-    "main.js": "/mediation-familiale-sud-toulouse/static/js/main.8573d779.chunk.js",
-    "main.js.map": "/mediation-familiale-sud-toulouse/static/js/main.8573d779.chunk.js.map",
-    "runtime-main.js": "/mediation-familiale-sud-toulouse/static/js/runtime-main.3d329fe5.js",
-    "runtime-main.js.map": "/mediation-familiale-sud-toulouse/static/js/runtime-main.3d329fe5.js.map",
+    "main.css": "/mediation-familiale-sud-toulouse/static/css/main.0a7355e2.chunk.css",
+    "main.js": "/mediation-familiale-sud-toulouse/static/js/main.8e81cef1.chunk.js",
+    "main.js.map": "/mediation-familiale-sud-toulouse/static/js/main.8e81cef1.chunk.js.map",
+    "runtime-main.js": "/mediation-familiale-sud-toulouse/static/js/runtime-main.30531f7a.js",
+    "runtime-main.js.map": "/mediation-familiale-sud-toulouse/static/js/runtime-main.30531f7a.js.map",
     "index.html": "/mediation-familiale-sud-toulouse/index.html",
-    "precache-manifest.94fe98122d02cc0aad599f5b3e401b9a.js": "/mediation-familiale-sud-toulouse/precache-manifest.94fe98122d02cc0aad599f5b3e401b9a.js",
+    "precache-manifest.4b509b6f29c2de2b075885f99909c668.js": "/mediation-familiale-sud-toulouse/precache-manifest.4b509b6f29c2de2b075885f99909c668.js",
     "service-worker.js": "/mediation-familiale-sud-toulouse/service-worker.js",
-    "static/css/main.bb513a47.chunk.css.map": "/mediation-familiale-sud-toulouse/static/css/main.bb513a47.chunk.css.map",
+    "static/css/main.0a7355e2.chunk.css.map": "/mediation-familiale-sud-toulouse/static/css/main.0a7355e2.chunk.css.map",
+    "static/media/courgette.css": "/mediation-familiale-sud-toulouse/static/media/0.72882892.ttf",
     "static/media/index.css": "/mediation-familiale-sud-toulouse/static/media/trombine.85d65506.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.3d329fe5.js",
-    "static/css/main.bb513a47.chunk.css",
-    "static/js/main.8573d779.chunk.js"
+    "static/js/runtime-main.30531f7a.js",
+    "static/css/main.0a7355e2.chunk.css",
+    "static/js/main.8e81cef1.chunk.js"
   ]
 }
