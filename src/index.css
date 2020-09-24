@@ -15,11 +15,6 @@
     margin: 0;
     padding: 0;
     background-color: #d4dfdf;
-    /*
-    background-image: url(./office.webp);
-    background-size: contain;
-    background-position: center bottom;
-    */
 }
 
 #welcome-photo {
@@ -117,7 +112,7 @@ nav {
     align-items: center;
     box-shadow: 0 8px 16px #0007;
     z-index: 1;
-    padding-right: .5rem;
+    padding-right: 1rem;
 }
 
 nav>div.logo {
@@ -127,7 +122,7 @@ nav>div.logo {
 
 h1,
 h2 {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 section {
@@ -190,7 +185,7 @@ li.expand>div::after {
 
 h1 {
     font-size: 1.5rem;
-    background: var(--thm-color-P);
+    background: linear-gradient(to right, var(--thm-color-PD), var(--thm-color-PL));
     text-align: center;
     color: #000d;
     margin: -1rem -1rem 1rem -1rem;
@@ -243,7 +238,8 @@ img.office {
     margin: 0;
 }
 
-a[href], a[href]:visited {
+a[href],
+a[href]:visited {
     display: inline-block;
     display: flex;
     justify-content: center;
@@ -259,7 +255,7 @@ a[href], a[href]:visited {
     text-decoration: none;
 }
 
-a[href] > * {
+a[href]>* {
     margin: 0 .5rem;
 }
 
@@ -267,7 +263,7 @@ section.contact {
     overflow: hidden;
 }
 
-section.contact > div {
+section.contact>div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -275,17 +271,17 @@ section.contact > div {
     align-items: center;
 }
 
-section.contact > div > div {
+section.contact>div>div {
     flex: 0 0 auto;
 }
 
-section.contact > div > .big-trombine {
+section.contact>div>.big-trombine {
     flex: 0 1 auto;
     margin: 0 0 -1.5rem 0;
 }
 
 @media (max-width: 680px) {
-    section.contact > div > .big-trombine {
+    section.contact>div>.big-trombine {
         width: 192px;
     }
 }

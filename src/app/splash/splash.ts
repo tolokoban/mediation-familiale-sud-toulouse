@@ -5,7 +5,8 @@ export default {
         const splash = document.getElementById("splash")
         if (!splash) return
 
-        const promises: Array<Promise<HTMLImageElement|void>> = [
+        // tslint:disable-next-line: invalid-void
+        const promises: Array<Promise<HTMLImageElement | void>> = [
             sleep(minTimeToStay),
             ...assets.map(loadImage)
         ]
@@ -18,7 +19,11 @@ async function loadImage(src: string): Promise<HTMLImageElement> {
     return new Promise<HTMLImageElement>(resolve => {
         const img = new Image()
         img.src = src
-        img.onload = () => resolve(img)
+        img.onload = () => { resolve(img) }
+        img.onerror = ex => {
+            console.error("Unable to load image: ", src)
+            console.error(ex)
+        }
     })
 }
 

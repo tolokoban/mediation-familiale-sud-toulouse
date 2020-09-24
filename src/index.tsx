@@ -15,7 +15,7 @@ async function start() {
     }
     Content.applyContent()
     await Splash.loadAssetsAndVanish(
-        ["./welcome.webp"],
+        ["./welcome.webp", "./trombine.webp"],
         SPLASH_TIMEOUT
     )
 }
