@@ -230,7 +230,7 @@ h1 {
     /*background: linear-gradient(to right, var(--thm-color-PD), var(--thm-color-PL));*/
     background: var(--thm-color-PD);
     text-align: center;
-    color: #000d;
+    color: #fffd;
     margin: -1rem -1rem 1rem -1rem;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     line-height: 2;
