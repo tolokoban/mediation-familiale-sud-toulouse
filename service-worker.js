@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mediation-familiale-sud-toulouse/precache-manifest.4b509b6f29c2de2b075885f99909c668.js"
+  "/mediation-familiale-sud-toulouse/precache-manifest.48fc485b6861ebbd084fb8912ddf3eeb.js"
 );
 
 self.addEventListener('message', (event) => {
