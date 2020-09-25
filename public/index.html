@@ -82,6 +82,11 @@
     <div id="root">
         <nav>
             <div class="logo"></div>
+            <a href="#section0" class="link">C'est quoi ?</a>
+            <a href="#section1" class="link">Pour qui ?</a>
+            <a href="#section2" class="link">Qui suis-je ?</a>
+            <a href="#contact" class="link">Contact</a>
+            <a href="#tarifs" class="link">Mes tarifs</a>
             <p><b>Médiation Familiale - Sud Toulouse</b></p>
         </nav>
         <main>
@@ -99,10 +104,8 @@
             </header>
             <div id="welcome-photo">Sortir du conflit avec la <b>médiation familiale</b></b></div>
             <div id="sections"></div>
-            <section class="contact">
-                <a name="contact">
-                    <h1>Me contacter</h1>
-                </a>
+            <section class="contact" data-name="contact">
+                <h1>Me contacter</h1>
                 <div>
                     <div>
                         <b>Muriel Vernay</b>
@@ -132,15 +135,29 @@
                     <img class="big-trombine" src="./trombine.webp" />
                 </div>
             </section>
-            <section>
+            <section id="tarifs" data-name="tarifs">
                 <h1>Mes tarifs</h1>
                 <div>
-                    Ca ne va pas vous coûter un bras, mais pensez quand même à passer voir votre banquier avant de
-                    commencer.
+                    <ul>
+                        <li>Entretien d'information (30 min) : 20€ par personne / Gratuit s'il est suivi d'une entrée en
+                            médiaton.</li>
+                        <li>Séance (1h30) : 50€ par personne.</li>
+                    </ul>
                 </div>
             </section>
+            <div class="spc"></div>
         </main>
-        <footer></footer>
+        <footer>
+            <div>
+                <a href="#section0" class="link">C'est quoi ?</a>
+                <a href="#section1" class="link">Pour qui ?</a>
+                <a href="#section2" class="link">Qui suis-je ?</a>
+            </div>
+            <div>
+                <a href="#contact" class="link">Contact</a>
+                <a href="#tarifs" class="link">Mes tarifs</a>
+            </div>
+        </footer>
     </div>
     <div id="splash">
         <div>Médiation Familiale - Sud Toulouse</div>

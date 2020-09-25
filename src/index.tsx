@@ -1,5 +1,6 @@
-import Content from './app/content'
+import Hash from './app/hash'
 import Splash from './app/splash/splash'
+import Content from './app/content'
 import './index.css'
 import "./fonts/fonts.css"
 import "./fonts/courgette/courgette.css"
@@ -16,6 +17,7 @@ async function start() {
     }
     Content.applyContent()
     decryptEMail()
+    Hash.initialize()
     await Splash.loadAssetsAndVanish(
         ["./welcome.webp", "./trombine.webp"],
         SPLASH_TIMEOUT

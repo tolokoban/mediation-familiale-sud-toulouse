@@ -7,17 +7,20 @@ export default {
         const content: IContent = Content
         const root = document.getElementById("sections")
         if (!root) return
+        
         const TWO = 2
+        let sectionIndex = 0
+
         for (let i = 0 ; i < content.length; i += TWO) {
             const sectionName = content[i + 0]
             if (typeof sectionName !== 'string') continue
             const items = content[i + 1]
             if (!Array.isArray(items)) continue
-            const anchor = tag("a", root)
-            anchor.setAttribute("name", `${i}`)
-            const section = tag("section", anchor)
+            const section = tag("section", root)
+            section.setAttribute("data-name", `section${sectionIndex++}`)
             tag("h1", sectionName, section)
             const ul = tag("ul", section)
+            ul.classList.add("section")
             for (let k = 0 ; k < items.length; k += TWO) {
                 const itemName = items[k + 0]
                 if (typeof itemName !== 'string') continue
