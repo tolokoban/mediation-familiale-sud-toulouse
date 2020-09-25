@@ -13,6 +13,7 @@ const handleScroll = throttler(() => {
     const height = main.getBoundingClientRect().height
     let nearestId = ""
     let shortestDistance = Number.MAX_SAFE_INTEGER
+    let foundEntirelyVisibleSection = false
     const sections = main.querySelectorAll("section[data-name]")
 
     for (const section of sections) {
@@ -21,9 +22,13 @@ const handleScroll = throttler(() => {
         const bottom = top + rect.height
         if (top > height) continue
         const distance = Math.abs(top)
-        if (distance < shortestDistance || (top > 0 && bottom < height)) {
+        if (distance < shortestDistance) {
             shortestDistance = distance
             nearestId = `#${section.getAttribute("data-name") || "null"}`
+        } else if (top > 0 && bottom < height && !foundEntirelyVisibleSection) {
+            shortestDistance = distance
+            nearestId = `#${section.getAttribute("data-name") || "null"}`
+            foundEntirelyVisibleSection = true
         }
     }
 
