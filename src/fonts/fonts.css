@@ -1,18 +1,11 @@
 body {
-    font-family: josefin, josefin-sans, sans-serif;
+    font-family: avenir, sans-serif;
 }
 
-/* lulo */
-@font-face {
-    font-family: 'Lulo';
-    font-style: normal;
-    font-weight: 500;
-    src: url(./lulo/lulo.woff2) format('woff2');
-}
+@import './avenir/avenir.css';
+@import './baloo/baloo.css';
+@import './courgette/courgette.css';
+@import './jua/jua.css';
+@import './lulo/lulo.css';
+@import './valera/valera.css';
 
-/* avenir */
-@font-face {
-    font-family: 'Avenir';
-    font-style: normal;
-    src: url(./avenir/avenir.woff2) format('woff2');
-}

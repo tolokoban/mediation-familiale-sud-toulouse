@@ -1,0 +1,6 @@
+/* avenir */
+@font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    src: url(./avenir.woff2) format('woff2');
+}

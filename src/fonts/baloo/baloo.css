@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Baloo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Baloo Tammudu 2 ExtraBold'), local('BalooTammudu2-ExtraBold'), url(./0.ttf) format('truetype');
+}

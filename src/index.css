@@ -1,11 +1,15 @@
 :root {
-    --thm-color-0: #ccc;
+    --thm-color-0: #d4dfdf;
     --thm-color-1: #eee;
     --thm-color-PL: #74faff;
     --thm-color-P: #57bbbf;
     --thm-color-PD: #40898c;
-    --border-radius: 0.5rem;
-    --border-radius: 0;
+    --thm-color-PDD: #347073;
+    --border-radius: 6px;
+    --font-text: avenir;
+    --font-title: 'Varela Round';
+    --font-slogan: jua;
+    --font-button: sans-serif;
 }
 
 #root {
@@ -16,11 +20,12 @@
     bottom: 0;
     margin: 0;
     padding: 0;
-    background-color: #d4dfdf;
+    background-color: var(--thm-color-0);
     display: flex;
     flex-direction: column;
     justify-self: start;
     align-items: stretch;
+    font-family: var(--font-text);
 }
 
 #welcome-photo {
@@ -29,26 +34,57 @@
     height: 60vh;
     background-size: cover;
     background-position: center center;
-    padding: 0 1em;
-    padding-top: 5vh;
-    font-size: 6vw;
+    padding: 0;
+    padding-top: 2vh;
     text-align: center;
-    color: var(--thm-color-PD);
-    font-family: Courgette;
+    color: #000b;
+}
 
-    font-family: avenir;
-    font-size: 24px;
-    color: #000;
+#welcome-photo>div:first-child {
+    font-size: 14px;
     font-weight: lighter;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    margin: 0 0 1em 0;
 }
 
-#welcome-photo strong {
-    font-family: lulo;
-    font-size: 3vw;
+#welcome-photo>div:last-child {
+    color: #3a7074;
+    font-family: var(--font-slogan);
+    font-size: 11vw;
+}
+
+#welcome-photo.baloo>div:last-child {
+    font-family: baloo;
+    font-size: 12vw;
     font-weight: bolder;
-    line-height: .8;
+    line-height: 1;
+    letter-spacing: 0.1em;
+}
+
+#welcome-photo.jua>div:last-child {
+    font-family: jua;
+    font-size: 11vw;
+    font-weight: bolder;
+    line-height: 1;
+    letter-spacing: 0.1em;
+}
+
+#welcome-photo.lulo>div:last-child {
+    font-family: lulo;
+    font-size: 8vw;
+    font-weight: bolder;
+    line-height: 1;
+    letter-spacing: 0.0em;
+}
+
+@media (min-width: 1000px) {
+    #welcome-photo.baloo>div:last-child,
+    #welcome-photo.jua>div:last-child,
+    #welcome-photo.lulo>div:last-child,
+    #welcome-photo>div:last-child {
+        font-size: 92px;
+    }
 }
 
 @media (min-width: 600px) {
@@ -112,7 +148,7 @@ header {
     align-items: center;
     width: 100vw;
     z-index: 2;
-    /*box-shadow: 0 8px 16px #0007;*/
+    box-shadow: 0 1px var(--thm-color-PDD);
 }
 
 header>div {
@@ -142,7 +178,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*box-shadow: 0 8px 16px #0007;*/
+    box-shadow: 0 1px var(--thm-color-PDD);
     z-index: 1;
     padding: 0 1rem;
 }
@@ -160,6 +196,11 @@ section {
     /*box-shadow: 0 1px 2px #0007;*/
     width: calc(100% - 2rem);
     max-width: 1400px;
+    box-shadow: 0 0 0 1px var(--thm-color-PD) inset;
+}
+
+ul.section {
+    padding: 0;
 }
 
 ul.section>li {
@@ -220,24 +261,21 @@ ul.section>li.expand button {
 
 h1,
 h2 {
-    font-family: lulo;
-    /*font-family: josefin;*/
-    font-weight: 600;
+    font-family: var(--font-title);
 }
 
 h1 {
-    font-size: 1.2rem;
-    /*background: linear-gradient(to right, var(--thm-color-PD), var(--thm-color-PL));*/
+    font-size: 1.4rem;
     background: var(--thm-color-PD);
     text-align: center;
     color: #fffd;
     margin: -1rem -1rem 1rem -1rem;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0;
     padding-left: 1rem;
 }
@@ -245,7 +283,7 @@ h2 {
 h2::before {
     content: "▸";
     position: absolute;
-    margin: -.25rem -1rem;
+    margin: -.125em -1rem;
     transition: transform .3s;
 }
 
@@ -293,7 +331,7 @@ a[href]:visited {
 
 a[href]>* {
     margin: 0 .5rem;
-    font-family: sans-serif;
+    font-family: var(--font-button);
     font-weight: bolder;
     font-size: .9rem;
 }
@@ -316,7 +354,7 @@ section.contact>div>div {
 
 section.contact>div>.big-trombine {
     flex: 0 1 auto;
-    margin: 0 0 -1.5rem 0;
+    margin: 0 0 calc(-1rem + 1px) 0;
 }
 
 @media (max-width: 680px) {
@@ -346,7 +384,7 @@ footer {
     height: 4.5rem;
     background-color: var(--thm-color-PD);
     z-index: 9;
-    /*box-shadow: 0 -4px 8px #0007;*/
+    box-shadow: 0 -1px var(--thm-color-PDD);
     margin: 0;
     padding: 0;
 }
@@ -363,8 +401,9 @@ footer>div {
 
 a[href].link,
 a[href].link:visited {
+    position: relative;
     font-size: .9rem;
-    font-family: sans-serif;
+    font-family: var(--font-button);
     font-weight: bolder;
     display: flex;
     justify-content: space-around;
@@ -381,9 +420,19 @@ a[href].link:visited {
     background: transparent;
     border-radius: .5em;
     /*box-shadow: 0 2px 4px #0008;*/
-    min-width: 6rem;
+    /* min-width: 6rem; */
     text-align: center;
     transition: all .9s;
+}
+
+a[href].link::after {
+    position: absolute;
+    content: ".";
+    font-size: 0;
+    height: 1px;
+    width: 100%;
+    bottom: 4px;
+    background: linear-gradient(to right, transparent, var(--thm-color-PL), transparent);
 }
 
 a[href].link.in,
@@ -395,7 +444,16 @@ a[href].link.in:visited {
     cursor: default;
     border: 1px solid transparent;
     box-shadow: none;
-    font-weight: normal;
+}
+
+a[href].link.in::after {
+    position: absolute;
+    content: ".";
+    font-size: 0;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    background: transparent;
 }
 
 div.spc {
